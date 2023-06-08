@@ -1,0 +1,24 @@
+dataset:
+  name: 'dataset'
+  df_path: '/path/to/dataframe'
+  tab_data_path: /path/to/tabnet_input_data.pkl
+  scale1_feat_root: '/path/to/scale1_feature'
+  scale2_feat_root: '/path/to/scale2_feature'
+  scale3_feat_root: '/path/to/scale3_feature'
+  select_scale: 0
+
+model:
+  arch: "attention-fusion-net"
+  input_dim: 1280
+  attention_dim: 256
+  num_modal: 4
+  use_tabnet: true
+  fusion_method: "mmtm"
+  num_class: 4
+
+test:
+  checkpoint: "/path/to/checkpoint.pth"
+  result: "./"
+  workers: 4
+
+save_dir: "/path/to/save"
